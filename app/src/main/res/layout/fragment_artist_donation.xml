@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFDB93"> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/btn_back_to_support"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@android:drawable/ic_menu_revert"
+        />
+
+    <TextView
+        android:id="@+id/tv_donation_artist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="The Smith"
+        android:textColor="#191919"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+</LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/bg_dark_top_rounded" android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:paddingBottom="80dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="На что пойдет поддержка"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ll_donation_goals_selectable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Выберите сумму"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_amount_100"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:text="100₽"
+                    android:textColor="#FFDB93"
+                    app:strokeColor="#FFDB93" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_amount_300"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:text="300₽"
+                    android:textColor="#FFDB93"
+                    app:strokeColor="#FFDB93" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_amount_500"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:text="500₽"
+                    android:textColor="#FFDB93"
+                    app:strokeColor="#FFDB93" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_amount_1000"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="1000₽"
+                    android:textColor="#FFDB93"
+                    app:strokeColor="#FFDB93" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Или введите другую сумму"
+                android:textColor="#C9C9C9"
+                android:textSize="14sp" />
+            <!--android:drawableStart="@drawable/ic_ruble" android:drawablePadding="12dp"-->
+            <EditText
+                android:id="@+id/et_custom_amount"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input_field"
+                android:hint="Сколько хочешь"
+                android:inputType="number"
+                android:padding="16dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#808080" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Оставьте комментарий"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <!--android:drawableStart="@drawable/ic_lock" android:drawablePadding="12dp"-->
+            <EditText
+                android:id="@+id/et_donation_comment"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_input_field"
+                android:enabled="false"
+                android:gravity="top|start"
+                android:hint="Опиши цель сбора подробнее"
+                android:inputType="textMultiLine"
+                android:padding="16dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#808080" />
+
+            <TextView
+                android:id="@+id/tv_comment_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Донат с комментарием доступен от 500₽"
+                android:textColor="#808080"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="32dp" />
+            <!--app:icon="@drawable/ic_donate_money" app:iconGravity="textStart"-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_submit_donation"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:backgroundTint="#FFDB93"
+                android:enabled="false"
+                android:text="Поддержать"
+                android:textSize="20dp"
+                android:textColor="#191919"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:iconTint="#191919" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

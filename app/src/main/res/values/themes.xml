@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.HatUp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/hatup_yellow</item>
+
+        <item name="android:colorBackground">@color/hatup_light_bg</item>
+        <item name="colorSurface">@color/hatup_card_light</item>
+
+        <item name="colorOnBackground">@color/hatup_text_dark</item>
+        <item name="colorOnSurface">@color/hatup_text_dark</item>
+    </style>
+
+    <style name="Theme.HatUp" parent="Base.Theme.HatUp" />
+</resources>

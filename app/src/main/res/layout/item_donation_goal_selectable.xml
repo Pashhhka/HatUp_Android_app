@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_goal_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="#2B2B2B"
+    app:cardCornerRadius="12dp"
+    app:strokeColor="#FFFFFF" app:strokeWidth="0dp"> <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/iv_goal_check"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_goal_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Название цели"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_goal_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Описание доната"
+            android:textColor="#C9C9C9"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_goal_progress_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/pb_goal_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="12dp"
+                android:progress="50"
+                android:progressBackgroundTint="#3A3A3A"
+                android:progressTint="#FFDB93" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_goal_current"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Собрано: 0 руб"
+                    android:textColor="#C9C9C9"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_goal_target"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Цель: 0 руб"
+                    android:textColor="#C9C9C9"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!--android:src="@drawable/ic_check_circle" android:visibility="gone"-->
+    <ImageView
+        android:id="@+id/iv_goal_check"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+
+
+</RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

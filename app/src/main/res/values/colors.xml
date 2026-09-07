@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hatup_yellow">#FFDB93</color>
+    <color name="hatup_dark_bg">#191919</color>
+    <color name="hatup_card_dark">#2B2B2B</color>
+    <color name="hatup_text_white">#FFFFFF</color>
+    <color name="hatup_accent_red">#720919</color>
+
+    <color name="hatup_light_bg">#F5F5F5</color>
+    <color name="hatup_card_light">#FFFFFF</color>
+    <color name="hatup_text_dark">#121212</color>
+</resources>

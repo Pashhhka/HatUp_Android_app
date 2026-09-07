@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.hatup.ui.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.hatup.ui.MapFragment"
+        tools:layout="@layout/fragment_map" />
+
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.example.hatup.ui.SupportFragment"
+        tools:layout="@layout/fragment_support" />
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.hatup.ui.ChatFragment"
+        tools:layout="@layout/fragment_chat" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.hatup.ui.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+
+
+    <fragment
+        android:id="@+id/eventDetailFragment"
+        android:name="com.example.hatup.ui.EventDetailFragment"
+        tools:layout="@layout/fragment_event_detail">
+        <action
+            android:id="@+id/action_eventDetail_to_artistDetail"
+            app:destination="@id/artistDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/artistDetailFragment"
+        android:name="com.example.hatup.ui.ArtistDetailFragment"
+        tools:layout="@layout/fragment_artist_detail" />
+
+
+    <fragment
+        android:id="@+id/donationFragment"
+        android:name="com.example.hatup.ui.DonationFragment"
+        tools:layout="@layout/fragment_artist_donation" />
+
+
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.hatup.ui.PaymentFragment"
+        tools:layout="@layout/fragment_payment" />
+</navigation>
